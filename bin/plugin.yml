@@ -1,10 +1,13 @@
 name: McFacts
-version: 1.0
+version: 2.0
 author: Hessky
 main: me.Hessky.McFacts.main
-description: Get random facts about minecraft! It's interesting install the plugin plz.
+description: Get random facts about minecraft!
 
 commands:
   facts:
     aliases: [fcs]
-    description: Get 24 random facts about Minecraft! Maybe some that you didn't know. Shortcut /fcs.
+    description: Get 50 random facts about Minecraft! /fcs
+  tiers:
+    aliases: [trs]
+    description: List of fact tiers (/trs)
