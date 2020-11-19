@@ -2,6 +2,9 @@ package me.Hessky.McFacts.commands;
 
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
@@ -22,6 +25,7 @@ public class Facts implements CommandExecutor{
 		
 		plugin.getCommand("Facts").setExecutor(this);
 	}
+	Map<String, Long> cooldown = new HashMap<String, Long>();
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -32,11 +36,22 @@ public class Facts implements CommandExecutor{
 			sender.sendMessage(Utils.chat(plugin.getConfig().getString("consolewarn")));
 			return true;
 		}
-		
+			
 			Player p = (Player) sender;
 			//Location for playSound
 			Location ploc = p.getLocation();
-
+			
+			//COOLDOWN
+			if(cooldown.containsKey(p.getName())) {
+				if(cooldown.get(p.getName()) > System.currentTimeMillis()) {
+					long timeleft = (cooldown.get(p.getName()) - System.currentTimeMillis()) / 1000;
+					p.sendMessage(Utils.chat(plugin.getConfig().getString("prefix") + " &4Coolodwn " + timeleft + " &4second(s)."));
+					return true;
+				}
+			}
+			cooldown.put(p.getName(), System.currentTimeMillis()+ plugin.getConfig().getInt("cooldown") * 1000);
+			
+			//Facts
 			if(plugin.getConfig().getString("chatmessage").toLowerCase().contains("true")) {
 				//Rare facts
 				int randomnum = (int) (Math.random()*1000);
