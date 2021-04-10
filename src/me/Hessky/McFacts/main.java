@@ -8,8 +8,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 import me.Hessky.McFacts.commands.Facts;
 import me.Hessky.McFacts.commands.Tiers;
 import me.Hessky.McFacts.events.FactBookEvent;
-import me.Hessky.McFacts.events.OwnerJoin;
+import me.Hessky.McFacts.events.UpdateCheckerJoin;
 import me.Hessky.McFacts.utils.Recipes;
+import me.Hessky.McFacts.utils.UpdateChecker;
 import me.Hessky.McFacts.utils.Utils;
 
 
@@ -28,9 +29,17 @@ public class main extends JavaPlugin{
 		Recipes.Recipe();
 		new Tiers(this);
 		new Facts(this);
-		this.getServer().getPluginManager().registerEvents(new OwnerJoin(), this);
+		this.getServer().getPluginManager().registerEvents(new UpdateCheckerJoin(), this);
 		this.getServer().getPluginManager().registerEvents(new FactBookEvent(), this);
 		System.out.println("\n\n --- MCFACTS PLUGIN ENABLED --- \n\n");
+		//update checker
+		new UpdateChecker(this, 82149).getVersion(version -> {
+	           if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+	               this.getLogger().info("McFacts is up to date!");
+	           } else {
+	               this.getLogger().info("There is a new update available for McFacts!");
+	           }
+	      });
 	}
 	
 		@Override
@@ -69,7 +78,7 @@ public class main extends JavaPlugin{
 					}
 				}	
 			}
-		}.runTaskTimerAsynchronously(this, 0, getConfig().getInt("autofact.time")*20);
+		}.runTaskTimerAsynchronously(this, 10, getConfig().getInt("autofact.time")*20);
 	}
 	
 }

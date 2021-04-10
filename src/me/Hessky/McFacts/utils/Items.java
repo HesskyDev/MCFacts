@@ -2,10 +2,10 @@ package me.Hessky.McFacts.utils;
 
 import java.util.ArrayList;
 
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataType;
 
 public class Items {
 	@Deprecated
@@ -18,9 +18,11 @@ public class Items {
 		lore.add("");
 		lore.add(Utils.chat("&6Interact with this to get a random fact."));
 		
+		meta.addEnchant(Enchantment.BINDING_CURSE, 252, true);
+		
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		meta.setDisplayName(Utils.chat("&6&lBook of Facts"));
-		meta.getPersistentDataContainer().set(Constants.FACT_BOOK, PersistentDataType.STRING, "");
 		meta.setLore(lore);
 		factbook.setItemMeta(meta);
 		

@@ -25,6 +25,8 @@ cooldown: 60
 #Chat message (true or false) If you want to send a fact with a command.
 autofact: 'true'
 
+#When a player types /Facts it will send a fact (true or false).
+chatmessage: 'true'
 
 #Prefix of the facts
 prefix: '&6&l[MCF] '
