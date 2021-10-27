@@ -1,13 +1,17 @@
 name: McFacts
-version: 2.4
+version: 2.5
 author: Hessky
 main: me.Hessky.McFacts.main
 description: Get random facts about minecraft!
 
 commands:
-  facts:
+  Facts:
     aliases: [fcs]
-    description: Get 50 random facts about Minecraft! /fcs
-  tiers:
+    description: Get 50 random facts about Minecraft (/fcs)
+  Tiers:
     aliases: [trs]
     description: List of fact tiers (/trs)
+  MCFactsReload:
+    aliases: [mcfactsrl]
+    description: Reload the config 
+    

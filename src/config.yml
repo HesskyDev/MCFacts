@@ -1,11 +1,11 @@
 #----------------------------------------------
-# ChatColors: &0 - Black &1 - Dark Blue &2 - Dark Green &3 - Cyan &4 - Dark  Red &5 - Purple 
+# ChatColors: &0 - Black &1 - Dark Blue &2 - Dark Green &3 - Cyan &4 - Dark  Red &5 - Purple
 # &6 - Orange &7 - Light Gray &8 - Gray &9 - Blue &a - Light Green &b - Light Blue &c - Light Red
 # &d - Pink &e - Yellow &f - White &k - r?2jf8 &l - BOLD &m - Strike &n - UnderLine &o - Italic
 
 
 #Console warning (Only player can execute the command)
-consolewarn: '&4You are not allowed to run this command if you are not a player!'
+consolewarn: '&4You are not a player!'
 
 
 #Update checker TRUE or FALSE
@@ -22,9 +22,6 @@ autofact:
 cooldown: 60
 
 
-#Chat message (true or false) If you want to send a fact with a command.
-autofact: 'true'
-
 #When a player types /Facts it will send a fact (true or false).
 chatmessage: 'true'
 
@@ -32,7 +29,7 @@ chatmessage: 'true'
 prefix: '&6&l[MCF] '
 
 #Common facts color below
-factcolor: '&a&l'
+commoncolor: '&a&l'
 
 
 #Rare facts chance (0-1000) and color
@@ -57,6 +54,11 @@ legendarycolor: '&e&l'
 
 
 #------------SPOILER---------FACTS BELOW----------SPOILER-------------
+
+
+
+
+
 #-How to make a new fact?
 #-Just type a fact below like this ,"fact here" and don't forget about "," I am sure you know how this works or you can just see the testfacts (below) to get an idea how to make a fact.
 

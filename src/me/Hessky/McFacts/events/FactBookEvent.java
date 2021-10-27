@@ -4,7 +4,6 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class FactBookEvent implements Listener{
@@ -18,13 +17,5 @@ public class FactBookEvent implements Listener{
 	
 		Player p = event.getPlayer();
 		p.performCommand("facts");
-	}
-	
-	@EventHandler
-	public void onPlace(BlockPlaceEvent e) {
-		Player p = e.getPlayer();
-		if(p.getInventory().getItemInMainHand().getItemMeta().getEnchantLevel(Enchantment.BINDING_CURSE) == 252) {
-			e.setCancelled(true);
-		}
 	}
 }
