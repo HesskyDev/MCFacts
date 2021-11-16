@@ -34,7 +34,7 @@ commoncolor: '&a&l'
 
 #Rare facts chance (0-1000) and color
 rarechance: 50
-rarecolor: '&1&l'
+rarecolor: '&b&l'
 
 
 #Epic facts chance (0-1000) and color

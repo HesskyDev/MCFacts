@@ -46,6 +46,7 @@ public class Facts implements CommandExecutor{
 			Location ploc = p.getLocation();
 			
 			//COOLDOWN
+			
 			if(cooldown.containsKey(p.getName())) {
 				
 				if(cooldown.get(p.getName()) > System.currentTimeMillis()) {
@@ -57,7 +58,9 @@ public class Facts implements CommandExecutor{
 				}
 			}
 			
-			cooldown.put(p.getName(), System.currentTimeMillis()+ plugin.getConfig().getInt("cooldown") * 1000);
+			if(!(p.hasPermission("op") || p.hasPermission("mcfacts.cooldown"))) {
+				cooldown.put(p.getName(), System.currentTimeMillis()+ plugin.getConfig().getInt("cooldown") * 1000);
+			}
 			
 			//Facts
 			if(plugin.getConfig().getString("chatmessage").toLowerCase().contains("true")) {

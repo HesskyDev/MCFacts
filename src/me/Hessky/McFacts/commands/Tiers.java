@@ -36,10 +36,10 @@ public class Tiers implements CommandExecutor{
 		
 		p.playSound(ploc, Sound.BLOCK_NOTE_BLOCK_BELL, 3.0F, 0.5F);
 		p.sendMessage(Utils.chat("&3&l| &c&lFacts Tier List &3&l|"));
-		p.sendMessage(Utils.chat("&3&l| &a&lCommon - " + plugin.getConfig().getString("commoncolor") + "This color"));
-		p.sendMessage(Utils.chat("&3&l| &1&lRare - " + plugin.getConfig().getString("rarecolor") + plugin.getConfig().getInt("rarechance") / 10 + "% chance"));
-		p.sendMessage(Utils.chat("&3&l| &5&lEpic - " + plugin.getConfig().getString("epiccolor") +  plugin.getConfig().getInt("epicchance") / 10 + "% chance"));
-		p.sendMessage(Utils.chat("&3&l| &e&lLegendary - " + plugin.getConfig().getString("legendarycolor") +  plugin.getConfig().getInt("legendarychance") / 10 + "% chance"));
+		p.sendMessage(Utils.chat("&3&l| " + plugin.getConfig().getString("commoncolor") + "&a&lCommon - This color"));
+		p.sendMessage(Utils.chat("&3&l| " + plugin.getConfig().getString("rarecolor") + "Rare - " + plugin.getConfig().getInt("rarechance") / 10 + "% chance"));
+		p.sendMessage(Utils.chat("&3&l| " + plugin.getConfig().getString("epiccolor") + "Epic - " +  plugin.getConfig().getInt("epicchance") / 10 + "% chance"));
+		p.sendMessage(Utils.chat("&3&l| " + plugin.getConfig().getString("legendarycolor") + "Legendary - "  +  plugin.getConfig().getInt("legendarychance") / 10 + "% chance"));
 	
 		return false;
 	}
