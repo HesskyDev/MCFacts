@@ -13,5 +13,4 @@ commands:
     description: List of fact tiers (/trs)
   MCFactsReload:
     aliases: [mcfactsrl]
-    description: Reload the config 
-    
+    description: Reload the config.    
