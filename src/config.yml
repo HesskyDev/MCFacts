@@ -1,0 +1,75 @@
+#----------------------------------------------
+# ChatColors: &0 - Black &1 - Dark Blue &2 - Dark Green &3 - Cyan &4 - Dark  Red &5 - Purple
+# &6 - Orange &7 - Light Gray &8 - Gray &9 - Blue &a - Light Green &b - Light Blue &c - Light Red
+# &d - Pink &e - Yellow &f - White &k - r?2jf8 &l - BOLD &m - Strike &n - UnderLine &o - Italic
+
+
+#Console warning (Only player can execute the command)
+consolewarn: '&4You are not a player!'
+
+
+#Update checker TRUE or FALSE
+updatecheck: 'true'
+
+
+#Time to send an random fact (automaitc) IN SECONDS!;
+autofact:
+  time: 300
+  enable: 'true'
+
+
+#Cooldown for the fact command in seconds. It needs to be a WHOLE number without decimals!
+cooldown: 60
+
+
+#When a player types /Facts it will send a fact (true or false).
+chatmessage: 'true'
+
+#Prefix of the facts
+prefix: '&6&l[MCF] '
+
+#Common facts color below
+commoncolor: '&a&l'
+
+
+#Rare facts chance (0-1000) and color
+rarechance: 50
+rarecolor: '&1&l'
+
+
+#Epic facts chance (0-1000) and color
+epicchance: 25
+epiccolor: '&5&l'
+
+
+#Legendary facts chance (0-1000) and color
+legendarychance: 10
+legendarycolor: '&e&l'
+
+
+
+
+
+
+
+
+#------------SPOILER---------FACTS BELOW----------SPOILER-------------
+
+
+
+
+
+#-How to make a new fact?
+#-Just type a fact below like this ,"fact here" and don't forget about "," I am sure you know how this works or you can just see the testfacts (below) to get an idea how to make a fact.
+
+testfacts: ["Fact one.", "Fact two.", "Fact three.", "Fact five."]
+
+#Facts below
+
+commonfacts: ["The first version of Minecraft was created in just six days.", "The first name of Minecraft was Cave Game", "If a player eats a raw chicken while sneaking, it will have a lower chance of food poisoning","Crafting table was once called workbench", "The first enderman originally had green eyes.", "Today, players can find 128 strongholds.", "Baby zombies burn in the daytime (in the newer versions)","You cannot see a player name tag through chests, even if the player is not sneaking.", "Pumpkins are more rare than diamonds.", "Weather happens around every 7 Minecraft days, which is 2 hours real time.","A bow at max power can destroy a boat and a minecart.", "Arrows shot through lava will cause fire damage.", "Right clicking a mooshrom with a bowl gives you mushroom stew.", "It is easier to catch fish in the rain.","An enraged spider who is damaged from falling or cactus will be neutral again.", "Skeletons and zombies don't burn on soul sand in the day.", "Sneaking effects your reach distance.","Tamed wolves will attack you if you shoot yourself with an arrow.", "If you throw an xp bottle at a slab, you will get more xp.", "Using a tool for different use than is intended will decrease the durability by 2 points instead of one.","Lava in the nether can flow 7 blocks, when in overworld it can flow only 4.", "Enderman will become passive again if it touches water.", "Iron Golems and wolves are the only mobs that can become hostile in peaceful mode."]
+
+rarefacts: ["A sheep has a 0.5% chance to spawn pink.", "If a creeper gets stuck in cobweb, it will not blow up.", "The ender dragons name is Jean, it was named by Notch.", "Minecraft is bigger than Earth.", "You move faster in water if the water is incased in something.", "One Minecraft day is equivalent to 20 minutes real time.", "Ghast mob of Minecraft is the sedond largest mob in the game.", "Drinking milk or honey can cure poison.", "Ghasts are voiced by a sleeping cat.", "The enderman language is English in reverse (or pitched down)."]
+
+epicfacts: ["Endermans always drop ender pearl if it is killed by an Iron Golem.", "When the game is pause, a hostile enderman will still shake.", "Despite their lack of arms, creepers can climb ladders.", "The landscape of Minecraft is called biomes.", "An arrow shot at primed TNT will come back at you.","Shears don't take durability damage when destroying wool.", "Creepers were actually meant to be pigs but they got encoded incorrectly.","All cows in Minecraft are female, since you can get milk from all cows."]
+
+legendaryfacts: ["Ghasts can't blow up cobblestone.", "Lava pools are more common in taiga and snowy biomes.", "Villigers will breed if there is a wooden door in their village.", "You can drag any mob with a fishing rod.", "Spider are friendly during daytime or fully lit room.", "It takes 10 minutes and 40 seconds to smelt a stack of anything.", "Playing Minecraft improves the players geometric skills."]
